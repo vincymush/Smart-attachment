@@ -1,0 +1,52 @@
+#CONTAINER{
+    margin: 0 auto;
+    width: 100%;
+}
+#HEADER{
+    background-color:cadetblue;
+    padding: 10PX;
+    text-align: center;
+}
+#MENU{
+    float: left;
+    width: 100%;
+    background-color: aqua;
+}
+#MENU ul li{
+list-style-type: none;
+display: inline;
+}
+#MENUE li a{
+display: block;
+text-decoration: none;
+border-right: 2px solid;
+padding: 3PX 10PX;
+float: left;
+}
+#CONTENT{
+    clear: left;
+    float: left;
+    width: 65%;
+    padding: 20px 0;
+    margin: 0 0 0 5%;
+    display: inline;
+}
+#SIDEBAR{
+    float: right;
+    width: 30%;
+    padding: 20px 0;
+    margin: 0;
+    display: inline;
+    background-color: rgb(119, 0, 255);
+}
+#FOOTER{
+    clear: left;
+    background-color: rgb(23, 0, 128);
+    text-align: center;
+    padding: 30px;
+    height: 1%;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+  
+}
