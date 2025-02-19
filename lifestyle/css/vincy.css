@@ -29,8 +29,8 @@ body {
 }
 .navbar .container {
   display: flex;
-justify-content: space-between;
-align-items: center;
+place-content: space-between;
+
 }
 
 .primary-nav {
@@ -77,7 +77,6 @@ align-items: center;
   color: #fff; /* Hover text color */
 }
 .navbar .mobile-menu {
-  display: block;
   cursor: pointer;
 }
 
@@ -96,12 +95,6 @@ section {
 }
 
 .hero {
-
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   text-align: center;
 }
 
@@ -134,7 +127,7 @@ nav a:hover {
 }
 
 .hero {
-  background-image: url(./images/backgroundlifestyle.png);
+  background-image: url(../images/backgroundlifestyle.png);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
