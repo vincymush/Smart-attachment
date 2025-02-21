@@ -1,136 +1,152 @@
+/* Global Styles */
 :root {
   --primary-color: #14f300;
+  --secondary-color: #007AF3;
+  --text-color: #333;
+  --bg-light: #f9f9f9;
+  --cta-bg: #ff6f61;
 }
-body {
 
-  font-family: Arial, sans-serif;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #fc1515;
-  color: #333;
-  box-sizing: border-box; /* Apply box-sizing globally */
 }
 
+body {
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+  background-color: var(--bg-light);
+}
+
+/* Navbar */
 .navbar {
   background-color: aqua;
-  padding: 3em;
+  padding: 1em 2em;
 }
+
 .navbar .logo {
   text-decoration: none;
   font-weight: bold;
   color: black;
-  font-size: 3em;
+  font-size: 2em;
 }
+
 .navbar .logo span {
   color: var(--primary-color);
 }
-.navbar nav {
-  display: none;
-}
+
 .navbar .container {
   display: flex;
-place-content: space-between;
-
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.primary-nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+
+/* Header */
+header {
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 20px;
+  z-index: 10;
+  position: relative;
   display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Align items vertically */
+  text-align: center;
+}
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px; /* Space between h1 and other elements */
 }
 
-.primary-nav li {
-  margin-right: 20px; /* Space between primary nav items */
+header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  flex-direction: column;
 }
 
-.primary-nav a {
-  color: black;
+header .logo {
   text-decoration: none;
-  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
-/* Secondary Navigation styling (Right-aligned) */
+header .logo span {
+  color: var(--primary-color);
+}
+header nav {
+  display: flex;
+  gap: 20px;
+}
+header a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.2em;
+  font-size: 1.2em;
+  transition: color 0.3s ease-in-out;
+}
+
+header a:hover {
+  text-decoration:solid;
+  color: var(--primary-color);
+
+}
+/* Secondary Navigation - Positioning */
 .secondary-nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  list-style: none;
   display: flex;
-  justify-content: flex-end; /* Align secondary nav items to the right */
+  gap: 10px; /* Reduced space between buttons */
+  position: absolute;
+  top: 15px; /* Adjusted for better placement */
+  right: 20px; /* Align to the right */
+  padding: 0;
 }
 
+/* Ensure items are inline */
 .secondary-nav li {
-  margin-left: 20px; /* Space between secondary nav items */
+  display: inline-block;
 }
 
+/* Button Styling (Smaller Padding) */
 .secondary-nav a {
-  color: black; /* Set text color for links */
+  display: inline-block;
+  font-size: 1em; /* Reduced font size */
+  padding: 8px 16px; /* Smaller padding */
+  background-color: var(--secondary-color); /* Default button color */
+  color: white;
   text-decoration: none;
-  font-size: 1.2em;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Add hover effect for secondary nav items */
-.secondary-nav a:hover {
-  background-color: #ff6f61; /* Hover background color */
-  color: #fff; /* Hover text color */
-}
-.navbar .mobile-menu {
+  border-radius: 6px; /* Slightly smaller rounded corners */
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: none;
   cursor: pointer;
 }
 
-a {
-  color: #444444;
+/* Hover effect */
+.secondary-nav a:hover {
+  background-color: var(--primary-color); /* Change color on hover */
+  transform: scale(1.05); /* Slight zoom effect */
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
 
-section {
-  padding: 7em 5em;
-}
-
+/* Hero Section */
 .hero {
-  text-align: center;
-}
-
-header {
-  background-color:cornflowerblue;
-  font-size: 1cm;
-  color:#f9f9f9;
-  padding: 20px 0;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 3em; /* Larger font size for the title */
-  color: #ff6f61; /* Soft red color for the title */
-  margin: 0;
-}
-
-nav a {
-  margin: 0 15px;
-  color: #fff;
-  text-decoration: none;
-  margin: 0 15px;
-  font-size: 1.2cm;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-nav a:hover {
-  color:gold; /* Change link color on hover */
-}
-
-.hero {
-  background-image: url(../images/backgroundlifestyle.png);
+  background-image: url("../images/backgroundlifestyle.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
   background-size: cover;
   height: 400px;
   color: white;
@@ -138,265 +154,317 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 20px;
 }
 
 .hero h1 {
-  color:aliceblue;
-  font-size: 7em;
+  font-size: 3.5em;
 }
 
 .hero p {
-  font-size: 2em; 
-    color:#14f300; 
-  font-weight: 400; 
-  line-height: 1cm; 
-  max-width: 600px; 
-  margin: 20px auto; 
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+  font-size: 1.5em;
+  max-width: 600px;
+  margin: 20px auto;
+  color: white;
 }
 
 .cta-btn {
-  font-size: 3cm;
+  font-size: 1.5em;
   padding: 10px 20px;
-  background-color: #007AF3;
+  background-color: var(--secondary-color);
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  margin-top: 20px;
 }
 
+.cta-btn:hover {
+  background-color: var(--primary-color);
+}
+
+/* Services */
 .services {
-  font-size: 16px;
-  background-color:bisque;
-  padding: 10px 20px;
+  background-color: bisque;
+  padding: 50px 20px;
   text-align: center;
-  ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 10px;
-    margin: 0;
-    height: auto;
-    
-  }
-
 }
 
+.services header {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 30px; /* Adds spacing below the header */
+}
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 0;
+}
 
 .service {
   text-align: center;
-  margin-bottom: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      background-color: #61ff96;
-      border-radius: 10px;
-      border: 10px solid #ccc; /* Add a border around the box */
-      padding: 15px 10px; /* Padding inside the box */
-      width: 400px; /* Set a fixed width */
-      margin: 0 auto;
-      
-      display: flex;
-      flex-direction:column ;
-      justify-content: center; /* Center vertically */
-      align-items: center; /* Center horizontally */
-}
-
-.service img {
-  padding: 30px ;
-  width: 100%;
-  height: 100%;
-  max-width: 400px;
-  margin-bottom: 5px; 
-  display: inline-block;
-  
-  
-}
-
-h3 {
-  margin: 10px 0;
-  font-size: 2em;
-}
-
-p {
-  font-size: 1em;
-  color: #333;
-}
-#features {
-  background-color: #f0f0f0; /* Light gray background */
-  text-align: center;
-  font-size: 30px;
-  
-    li{
-      display: inline-block;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      background-color: #ff6f61;
-      border-radius: 10px;
-      border: 10px solid #ccc; /* Add a border around the box */
-      padding: 20px; /* Padding inside the box */
-      width: 400px; /* Set a fixed width */
-      margin: 0 auto
-    }
-  
-}
-
-
-
-.features-item img{
-  padding: 50px 0;
-  background-color: hsl(0, 0%, 95%);
-  text-align: center;
-  width: 100%;
-  height: auto;
-  max-width: 400px;
-  margin-bottom: 10px;
-}
-
-.feature-list {
-  list-style-type: none;
-  padding: 10px;
+  background-color: #61ff96;
+  border: 3px solid #ccc;
+  padding: 25px;
+  width: 320px;
   margin: 10px;
-  font-size: 30px;
+  border-radius: 10px;
+  margin: 110px;
 }
 
-.feature-item {
-  text-align: center;  
- /* Space between items */
+.service h3 {
+  font-size: 1.8em; /* Increased heading size */
+  font-weight: bold;
 }
 
-.feature-item img {
-  margin-right: 30px;  /* Space between image and text */
-  width: 400px;  /* Image width */
-  height: 400px;  /* Image height */
-  object-fit: cover;  /* Make sure images fit inside their container */
+.service p {
+  font-size: 1.2em; /* Larger text for better readability */
+  line-height: 1.6; /* More spacing between lines */
 }
-
-.feature-item p {
-  font-size: 40px;  /* Text size */
-  font-weight: 500;  /* Semi-bold text */
-  color: #333;  /* Text color */
+.service:hover {
+  background-color: var(--primary-color);
+  transform: scale(1.05);
 }
-
-
-.testimonial {
-  font-size: 1cm;
-  background-color: #ff6f61;
-  display: inline-block;
-  width: 30%;
-  margin: 20px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.service img {
+  max-width: 100%;
+  height: auto;
   border-radius: 8px;
-
-
-
-}
-
-
-.testimonials {
-  font-size: 1.2cm;
-  padding: 50px 20px;
-  text-align: center;
-  background-color:blanchedalmond;
-}
-
-
-footer {
-  font-size: 1.2cm;
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-  width: 100%;
-  box-sizing: border-box; /* Ensure footer is full width */
-  text-align: center;
-}
-
-footer a {
-  color: #ff6f61;
-  text-decoration: none;
-  margin: 0 10px;
-}
-
-footer p {
-  margin: 0;
-}
-
-.contact-section {
-  padding: 50px 20px;
-  background-color: #f9f9f9;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.contact-section .container {
-  width: 100%; 
-  background-color: aqua;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.contact-left {
-  flex: 1;
-  text-align: left;
-}
-
-.contact-left h2 {
-  font-size: 2.5em;
-  color: #333;
   margin-bottom: 20px;
 }
 
+.service h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* Features */
+.features {
+  background-color: #f9f9f9;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Section Header */
+.features header {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Section Title */
+.features h2 {
+  font-size: 2.2em;
+  margin-bottom: 25px;
+}
+
+/* Section Description */
+.features p {
+  font-size: 1.3em;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+
+.feature-item {
+  background-color: rgb(194, 173, 173);
+  border-radius: 10px;
+  padding: 25px;
+  width: 400px;
+  text-align: center;
+}
+
+/* Hover Effect */
+.feature-item:hover {
+  transform: translateY(-5px);
+  
+}
+.feature-item img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.feature-item p {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.testimonials {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.testimonials header {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: center; /* Centers the testimonials */
+  gap: 200px; /* Space between each testimonial */
+  flex-wrap: wrap; /* Wraps to the next line on smaller screens */
+}
+
+.testimonial {
+  width: 200%;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px; /* Each testimonial has a fixed width */
+  text-align: center;
+}
+
+.testimonial img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.testimonial:hover {
+  background-color: #72ade0; /* Light blue background on hover */
+  transform: translateY(-10px); /* Slight lift effect */
+}
+
+.testimonial p {
+  font-size: 1.3em; /* Medium font size */
+  color: #333; /* Darker text for better contrast */
+}
+
+.testimonial p:last-child {
+  font-weight: bold; /* Bold for names */
+  font-size: 1.3em;
+}
+/* Contact */
+.contact-section {
+  padding: 50px 20px;
+  
+  width: 100%;
+}
+
+.contact-section .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+align-items: flex-start;
+}
+
+.contact-left {
+  width: 100%;
+  max-width: 500px;
+}
 form {
   display: flex;
   flex-direction: column;
+  gap: 20px ;
 }
 
 label {
   font-size: 1.2em;
-  margin-bottom: 10px;
-  color: #444;
+  font-weight: bold;
+  text-align: left;
 }
-
-input[type="text"],
-textarea {
-  padding: 15px;
+input[type="text"], textarea {
+  padding: 10px;
   font-size: 1em;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-bottom: 20px;
   width: 100%;
-  box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
 input[type="submit"] {
-  background-color: #007AF3;  
+  background-color: var(--secondary-color);
   color: white;
   border: none;
-  padding: 15px;
+  padding: 10px;
   font-size: 1.2em;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-  background-color: #005bb5;  
+  background-color: #005bb5;
 }
 
+textarea {
+  flex: 2;
+  height: 100px;
+  resize: none; /* Prevent resizing */
+}
+.send-message-cta {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
 
+/* Hover Effect */
+.send-message-cta:hover {
+  background-color: #f9f9f9;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer a {
+  color: var(--cta-bg);
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .contact-section .container {
+  header nav {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    gap: 10px;
+  }
+  .navbar nav {
+    display: none;
   }
 
-  .contact-left {
-    text-align: center;
+  .hero {
+    height: 300px;
   }
-}
-.navbar nav {
-  display: none; /* Hide nav by default on mobile */
+
+  .testimonial {
+    width: 90%;
+  }
+
+  .service-list, .feature-list {
+    flex-direction: column;
+    align-items: center;
+  }
 }
