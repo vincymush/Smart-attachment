@@ -13,6 +13,7 @@ body {
 
 /* Navbar */
 .navbar {
+  color:#34495e;
   background: #2c3e50;
   padding: 15px 20px;
 }
@@ -50,19 +51,22 @@ body {
   color: #f39c12;
   font-weight: bold;
   padding: 8px 15px;
-  border: 2px solid #f39c12;
+  border: 2px solid #e9e8e6;
   border-radius: 5px;
-  transition: 0.3s;
+  transition: 0.3s ease, transform 0.3s ease;
 }
 
 .secondary-nav a:hover {
-  background: #f39c12;
-  color: #fff;
+  background-color: #0cec96;
+  color: rgb(241, 4, 4);
+  transform: scale(1.1); /* Overshoot effect */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Slight shadow effect */
 }
 
 /* Main Navigation */
 header {
-  background: #34495e;
+  background: #4f90d1;
+  font-weight: bolder;
   padding: 10px;
   text-align: center;
 }
@@ -78,12 +82,14 @@ header nav a {
   text-decoration: none;
   font-size: 16px;
   padding: 10px 15px;
-  transition: 0.3s;
+  transition: 0.3s ease, transform 0.3s ease;
 }
 
 header nav a:hover {
   background: #f39c12;
   border-radius: 5px;
+  transform: scale(1.1); /* Overshoot effect */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Slight shadow effect */
 }
 
 /* Hero Section */
@@ -91,10 +97,10 @@ header nav a:hover {
   background-image: url("../images/backgroundlifestyle.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;  /* Ensures the image covers the entire container */
-  background-attachment: fixed;  /* Keeps the background fixed during scrolling */
-  height: 400px;  /* Set a height for the hero section */
-  color: rgb(77, 211, 117);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 400px;
+  color:rgb(255, 255, 255);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,6 +110,11 @@ header nav a:hover {
 .hero h1 {
   font-size: 36px;
   margin-bottom: 10px;
+  transition: 0.3s ease;
+}
+
+.hero h1:hover {
+  transform: scale(1.1); /* Overshoot effect */
 }
 
 .hero p {
@@ -112,17 +123,19 @@ header nav a:hover {
 }
 
 .cta-btn {
-  background: #f39c12;
-  color: white;
+  background: #8ad897;
+  color: rgb(250, 106, 39);
   text-decoration: none;
   padding: 10px 20px;
   font-size: 18px;
   border-radius: 5px;
-  transition: 0.3s;
+  transition: 0.3s ease, transform 0.3s ease;
+  font-weight: bold;
 }
 
 .cta-btn:hover {
-  background: #e67e22;
+  background: #6c07f1;
+  transform: scale(1.1); /* Overshoot effect */
 }
 
 /* Services Section */
@@ -147,6 +160,12 @@ header nav a:hover {
   border-radius: 10px;
   max-width: 300px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease, transform 0.3s ease;
+}
+
+.service:hover {
+  transform: scale(1.05); /* Slight overshoot effect */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
 }
 
 .service img {
@@ -177,6 +196,12 @@ header nav a:hover {
 
 .feature-item {
   max-width: 250px;
+  transition: 0.3s ease, transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: scale(1.05); /* Slight overshoot effect */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
 }
 
 .feature-item img {
@@ -205,6 +230,12 @@ header nav a:hover {
   border-radius: 10px;
   max-width: 300px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease, transform 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: scale(1.05); /* Slight overshoot effect */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
 }
 
 .testimonial img {
@@ -212,41 +243,119 @@ header nav a:hover {
   height: 50px;
   border-radius: 50%;
 }
-
 /* Contact Section */
 .contact-section {
   background: #34495e;
   color: white;
-  padding: 50px 20px;
-  text-align: center;
+  padding: 60px 20px;
+  text-align: left;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;  /* Allows for children to align relative to this section */
+  width: 100%;  /* Ensure the section takes the full width */
 }
 
+/* Contact Form Container */
 .contact-left {
   max-width: 500px;
-  margin: 0 auto;
+  margin: 0;
+  padding: 0;  /* Remove any padding */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;  /* Ensure the container is positioned inside the parent */
 }
 
+/* Form */
+form {
+  width: 100%;
+}
+
+/* Label styling */
+label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Input & Textarea styling */
 input, textarea {
   width: 100%;
-  padding: 10px;
+  padding: 8px 12px;
   margin-top: 10px;
-  border-radius: 5px;
-  border: none;
+  border-radius: 8px;
+  border: 2px solid #f39c12;
+  background: #ecf0f1;
+  color: #333;
+  font-size: 16px;
+  transition: 0.3s ease, transform 0.3s ease;
+  height: 40px;
 }
 
+/* Focus effect for input & textarea */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #8ad897;
+  box-shadow: 0 0 8px rgba(138, 216, 151, 0.6);
+}
+
+/* Hover effect for input & textarea */
+input:hover, textarea:hover {
+  transform: scale(1.03);
+}
+
+/* Send Message Button */
 .send-message-cta {
   background: #f39c12;
   color: white;
-  font-size: 16px;
-  border-radius: 5px;
-  padding: 10px 15px;
+  font-size: 18px;
+  border-radius: 8px;
+  padding: 8px 15px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease, transform 0.3s ease;
+  font-weight: bold;
+  border: none;
 }
 
+/* Hover effect for button */
 .send-message-cta:hover {
   background: #e67e22;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Active effect for button */
+.send-message-cta:active {
+  transform: scale(0.98);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Spacing between form elements */
+input, textarea, .send-message-cta {
+  margin-bottom: 15px; /* Increased margin for better spacing */
+}
+
+
+/* Responsive Design for Contact Form */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 10px;
+  }
+
+  .contact-left {
+    max-width: 90%;
+  }
+
+  input, textarea {
+    font-size: 14px; /* Slightly smaller on mobile */
+  }
+
+  .send-message-cta {
+    font-size: 16px; /* Slightly smaller on mobile */
+    padding: 10px 18px; /* Adjusted padding for mobile */
+  }
+}
+
 
 /* Footer */
 footer {
@@ -262,22 +371,5 @@ footer a {
 }
 
 footer a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .secondary-nav {
-      flex-direction: column;
-      align-items: center;
-      display: flex;
-  }
-
-  .service-list, .feature-list, .testimonials-container {
-      flex-direction: column;
-  }
-
-  header nav {
-      flex-direction: column;
-  }
+  text-decoration: solid;
 }
